@@ -1,0 +1,5 @@
+{{#data}}
+    <span>
+        <img src="{{pokemonImage}}" alt="{{pokemonId}}"/>
+    </span>
+{{/data}}

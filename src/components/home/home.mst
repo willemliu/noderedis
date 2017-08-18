@@ -1,0 +1,8 @@
+<html>
+    <head>
+        <title>NodeJS, Express, Redis cluster, TypeScript</title>
+    </head>
+    <body>
+        {{>partial}}
+    <body>
+</html>
