@@ -32,7 +32,7 @@ This example project is created as part of my research on how to use a clustered
     1. *ux: `npm run dev`
 
 # Usage
-* Navigate to `http://localhost:3333` to see the generated webpage.
+* Navigate to `http://localhost:3333` to see the generated webpage (~100KB).
 * Navigate to the same page again to see the website served from the Redis cache.
 * Navigate to `http://localhost:333/invalidate` to invalidate the Redis cache.
 
