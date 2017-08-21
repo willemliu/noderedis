@@ -1,3 +1,4 @@
+
 # noderedis
 This is an example project showing how to setup a project using NodeJS, Express, Redis, Redis Cluster, TypeScript and Gulp.
 
@@ -12,9 +13,26 @@ This example project is created as part of my research on how to use a clustered
 
 # Installation
 1. Run `npm install` to install all the required dependencies.
+1. Copy `src/redis/credentials.example.ts` to `src/redis/credentials.ts`.
+1. Edit `src/redis/credentials.ts` so the `host` value points to your own Redis instance.
+    1. Optionally if you use a Redis Cluster you can edit `src/redis/redis.ts` and change 
+    ```
+    //client: redisClustr,
+    host: redisCredentials.host,
+    ```
+    into
+    ```
+    client: redisClustr,
+    //host: redisCredentials.host,
+    ```
 1. Build the project
     1. Run `gulp build` to build the project.
     1. Run `gulp watch` to build the project and keep a watch on the project files and compile them on any changes.
 1. Start the server with:
     1. Windows: `npm run devw`
     1. *ux: `npm run dev`
+
+# Usage
+* Navigate to `http://localhost:3333` to see the generated website.
+* Navigate to the same page again to see the website served from the Redis cache.
+* Navigate to `http://localhost:333/invalidate` to invalidate the Redis cache.
