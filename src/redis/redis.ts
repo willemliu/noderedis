@@ -11,7 +11,8 @@ let redisClustr = new RedisClustr({
 });
 
 let redis = cache({
-    client: redisClustr,
+    //client: redisClustr,
+    host: redisCredentials.host,
     prefix: 'noderedis',
     expire: 60
 });

@@ -42,10 +42,10 @@ export default class HomeControllerImpl implements Controller {
 
             const html = Mustache.render(this.templates['home'], { data: data }, {partial: this.templates['partial']});
             res.send(html);
-            /*this.redis.get('home', function (error, entries) {
+            this.redis.get('home', function (error, entries) {
                 if ( error ) throw error;
                 entries.forEach(console.log.bind(console));
-            });*/
+            });
         });
 
         this.app.get('/invalidate', (req, res) => {
