@@ -1,4 +1,3 @@
-
 # noderedis
 This is an example project showing how to setup a project using NodeJS, Express, Redis, Redis Cluster, TypeScript and Gulp.
 
@@ -33,6 +32,13 @@ This example project is created as part of my research on how to use a clustered
     1. *ux: `npm run dev`
 
 # Usage
-* Navigate to `http://localhost:3333` to see the generated website.
+* Navigate to `http://localhost:3333` to see the generated webpage.
 * Navigate to the same page again to see the website served from the Redis cache.
 * Navigate to `http://localhost:333/invalidate` to invalidate the Redis cache.
+
+# Conclusion
+On a laptop with Core i7-5500U, 8GB Ram, SSD HDD running Windows 10:
+- Generating the webpage costs ~40ms to ~50ms.
+- Serving the website from a locally installed Redis cache reduces that amount to ~20ms.
+
+On a high-traffic webserver one can make the assumption that generating the website might take longer than ~40ms. And operations like calling other webservices or querying a database will add to that time as well.
