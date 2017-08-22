@@ -1,6 +1,5 @@
 import * as express from 'express';
 import * as fs from 'fs-extra';
-import * as fetch from 'isomorphic-fetch';
 import * as Mustache from 'mustache';
 import {Controller} from '../Controller';
 
@@ -37,7 +36,7 @@ export default class HomeControllerImpl implements Controller {
             console.info('GET home');
             let data: {pokemonImage: string, pokemonId: number}[] = [];
             for(let pokemonId = 1; pokemonId <= 802; pokemonId++) {
-                data.push({ pokemonImage: `https://www.moviesom.com/img/pokemon/${this.pad(pokemonId, 3)}MS.png`, pokemonId: pokemonId });
+                data.push({ pokemonImage: `https://cdn.moviesom.com/img/pokemon/${this.pad(pokemonId, 3)}MS.png`, pokemonId: pokemonId });
             }
 
             const html = Mustache.render(this.templates['home'], { data: data }, {partial: this.templates['partial']});
