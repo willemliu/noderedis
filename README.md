@@ -27,7 +27,7 @@ This example project is created as part of my research on how to use a clustered
     //host: redisCredentials.host,
     ```
 1. Build the project
-    1. Run `gulp build` to build the project.
+    1. Run `gulp` to build the project.
     1. Run `gulp watch` to build the project and keep a watch on the project files and compile them on any changes.
 1. Start the server with:
     1. Windows: `npm run devw`
