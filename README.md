@@ -1,3 +1,4 @@
+
 # noderedis
 This is an example project showing how to setup a project using NodeJS, Express, Redis, Redis Cluster, TypeScript, Mustache and Gulp.
 
@@ -9,6 +10,7 @@ This example project is created as part of my research on how to use a clustered
 * Gulp
 * NPM
 * NodeJS
+* Redis Cache
 
 # Installation
 1. Run `npm install` to install all the required dependencies.
