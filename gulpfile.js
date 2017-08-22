@@ -12,6 +12,8 @@ gulp.task('watch', ['build'], (cb) => {
     gulp.watch(['src/**/*.mst'], ['copy-templates']);
 });
 
+gulp.task('default', ['build']);
+
 gulp.task('build', ['ts', 'copy-templates']);
 
 gulp.task('ts', [], () => {
