@@ -43,3 +43,5 @@ On a laptop with Core i7-5500U, 8GB Ram, SSD HDD running Windows 10:
 - Serving the website from a locally installed Redis cache reduces that amount to ~20ms.
 
 On a high-traffic webserver one can make the assumption that generating the website might take longer than ~40ms. And operations like calling other webservices or querying a database will add to that time as well.
+
+If you happen to have your Redis Cache installation on a separate server from your webserver then you have to take network overhead into consideration. You may find that sometimes it makes little difference or in rare cases worsen the ttfb if you for instance retrieve data from your database again and again with each page load compared to fetching an already cached webpage from a remote Redis Cache.
