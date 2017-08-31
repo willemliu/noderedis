@@ -1,4 +1,3 @@
-
 # noderedis
 This is an example project showing how to setup a project using NodeJS, Express, Redis, Redis Cluster, TypeScript, Mustache and Gulp.
 
@@ -36,7 +35,7 @@ This example project is created as part of my research on how to use a clustered
 # Usage
 * Navigate to `http://localhost:3333` to see the generated webpage (~100KB).
 * Navigate to the same page again to see the website served from the Redis cache.
-* Navigate to `http://localhost:333/invalidate` to invalidate the Redis cache.
+* Navigate to `http://localhost:3333/invalidate` to invalidate the Redis cache.
 
 # Conclusion
 On a laptop with Core i7-5500U, 8GB Ram, SSD HDD running Windows 10:
